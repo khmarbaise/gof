@@ -1,4 +1,4 @@
-package com.soebes.patterns.state;
+package com.soebes.patterns.strategy;
 
 import java.util.ArrayList;
 

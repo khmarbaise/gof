@@ -1,4 +1,4 @@
-package com.soebes.patterns.state;
+package com.soebes.patterns.strategy;
 
 public enum PriceCodeType {
 	REGULAR_PRICE, // Usual Price for a Movie

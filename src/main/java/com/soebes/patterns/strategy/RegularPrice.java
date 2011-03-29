@@ -1,4 +1,4 @@
-package com.soebes.patterns.state;
+package com.soebes.patterns.strategy;
 
 public class RegularPrice implements Price {
 

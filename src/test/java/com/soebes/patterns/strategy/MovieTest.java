@@ -1,8 +1,13 @@
-package com.soebes.patterns.state;
+package com.soebes.patterns.strategy;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.Assert;
+
+import com.soebes.patterns.strategy.BlockBusterPrice;
+import com.soebes.patterns.strategy.ChildrensPrice;
+import com.soebes.patterns.strategy.Movie;
+import com.soebes.patterns.strategy.RegularPrice;
 
 @Test
 public class MovieTest {
