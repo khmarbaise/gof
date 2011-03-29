@@ -4,6 +4,10 @@ public class Context {
 
     private IState currentState;
 
+    public Context() {
+        this.currentState = new ConcreteState2(this);
+    }
+
     public IState getCurrentState() {
         return currentState;
     }

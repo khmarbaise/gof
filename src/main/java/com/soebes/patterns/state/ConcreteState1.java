@@ -10,6 +10,8 @@ public class ConcreteState1 implements IState {
 
     @Override
     public void operate() {
+        System.out.println("ConcreteState1()");
+        context.setCurrentState(new ConcreteState2(context));
     }
 
 }
