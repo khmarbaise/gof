@@ -1,19 +1,15 @@
 package com.soebes.patterns.strategy;
 
+import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.Assert;
-
-import com.soebes.patterns.strategy.BlockBusterPrice;
-import com.soebes.patterns.strategy.ChildrensPrice;
-import com.soebes.patterns.strategy.Movie;
-import com.soebes.patterns.strategy.RegularPrice;
 
 @Test
 public class MovieTest {
 	public static double EPSILON = 1E-06;
 	
-	@DataProvider(name = "createChildrenMovie")
+	@DataProvider(name = "createChildrensMovie")
 	public Object[][] createChildrensMovie() {
 		return new Object[][] {
 			// Movie             Type Of Movie,         rentedDays, expectedCharge
@@ -24,10 +20,10 @@ public class MovieTest {
 			{ new Movie("Ariel", new ChildrensPrice()), 5, 4.5 },
 		};
 	}
-	@Test(dataProvider = "createChildrenMovie")
-	public void childrensMovie(Movie movie, int rentedDays, double charge) {
+	@Test(dataProvider = "createChildrensMovie")
+	public void childrensMovie(Movie movie, int rentedDays, double expectedCharge) {
 		double calculatedCharge = movie.getCharge(rentedDays);
-		Assert.assertEquals(calculatedCharge, charge, EPSILON);
+		assertEquals(calculatedCharge, expectedCharge, EPSILON);
 	}
 
 	@DataProvider(name = "createRegularMovie")
@@ -42,9 +38,9 @@ public class MovieTest {
 		};
 	}
 	@Test(dataProvider = "createRegularMovie")
-	public void regularMovie(Movie movie, int rentedDays, double charge) {
+	public void regularMovie(Movie movie, int rentedDays, double expectedCharge) {
 		double calculatedCharge = movie.getCharge(rentedDays);
-		Assert.assertEquals(calculatedCharge, charge, EPSILON);
+		assertEquals(calculatedCharge, expectedCharge, EPSILON);
 	}
 
 	@DataProvider(name = "createBlockBusterMovie")
@@ -59,9 +55,9 @@ public class MovieTest {
 		};
 	}
 	@Test(dataProvider = "createBlockBusterMovie")
-	public void blockBusterMovie(Movie movie, int rentedDays, double charge) {
+	public void blockBusterMovie(Movie movie, int rentedDays, double expectedCharge) {
 		double calculatedCharge = movie.getCharge(rentedDays);
-		Assert.assertEquals(calculatedCharge, charge, EPSILON);
+		assertEquals(calculatedCharge, expectedCharge, EPSILON);
 	}
 
 }
