@@ -2,7 +2,7 @@ package com.soebes.patterns.observer;
 
 public class Zeitung {
 
-    //Ein examplarisches Field.
+    // Ein examplarisches Field.
     private final String titel;
 
     public Zeitung(String titel) {
@@ -12,4 +12,4 @@ public class Zeitung {
     public String getTitel() {
         return titel;
     }
-} 
+}

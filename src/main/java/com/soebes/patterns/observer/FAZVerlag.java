@@ -6,11 +6,11 @@ public class FAZVerlag extends AVerlag {
 
     public void setAktuelleZeitung(Zeitung aktuelleZeitung) {
         this.aktuelleZeitung = aktuelleZeitung;
-        //Nach dem einen neue Zeitung gesetzt wurde, werden alle Abonnenten benachrichtigt.
+        // Nach dem einen neue Zeitung gesetzt wurde, werden alle Abonnenten benachrichtigt.
         verteileZeitung(aktuelleZeitung);
     }
 
     public Zeitung getAktuelleZeitung() {
         return aktuelleZeitung;
     }
-} 
+}

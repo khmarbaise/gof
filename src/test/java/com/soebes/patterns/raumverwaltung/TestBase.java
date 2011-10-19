@@ -8,9 +8,11 @@ import java.util.Date;
 public class TestBase {
 
     /**
-     * This method will convert a date which is defined as string (Format: dd.MM.yyyy HH:mm:ss Z) 
+     * This method will convert a date which is defined as string (Format: dd.MM.yyyy HH:mm:ss Z)
      * into Date type.
-     * @param dateStr The string which represents a Date.
+     * 
+     * @param dateStr
+     *            The string which represents a Date.
      * @return Date
      * @throws ParseException
      */
@@ -18,7 +20,7 @@ public class TestBase {
         Date d = null;
         try {
             DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
-            d = (Date)formatter.parse(dateStr);
+            d = (Date) formatter.parse(dateStr);
         } catch (ParseException e) {
             System.err.println("Date format is wrong: " + e.getMessage());
         }

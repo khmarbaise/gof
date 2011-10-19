@@ -2,22 +2,22 @@ package com.soebes.patterns.state2;
 
 class Freundin {
 
-	private IZustand aktuellerZustand;
+    private IZustand aktuellerZustand;
 
     public IZustand getAktuellerZustand() {
-		return aktuellerZustand;
-	}
+        return aktuellerZustand;
+    }
 
-	public Freundin(IZustand aktuellerZustand) {
-		super();
-		this.aktuellerZustand = aktuellerZustand;
-	}
+    public Freundin(IZustand aktuellerZustand) {
+        super();
+        this.aktuellerZustand = aktuellerZustand;
+    }
 
     public Freundin() {
-    	this.aktuellerZustand = new Neutral(this);
-	}
+        this.aktuellerZustand = new Neutral(this);
+    }
 
-	public void setAktuellerZustand(IZustand aktuellerZustand){
+    public void setAktuellerZustand(IZustand aktuellerZustand) {
         this.aktuellerZustand = aktuellerZustand;
     }
 
