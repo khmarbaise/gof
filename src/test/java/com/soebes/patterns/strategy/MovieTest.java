@@ -12,7 +12,7 @@ public class MovieTest {
     @DataProvider(name = "createChildrensMovie")
     public Object[][] createChildrensMovie() {
         return new Object[][] {
-                // Movie Type Of Movie, rentedDays, expectedCharge
+                //      Movie              Type Of Movie,       rentedDays, expectedCharge
                 {
                         new Movie("Ariel", new ChildrensPrice()), 1, 1.5
                 },

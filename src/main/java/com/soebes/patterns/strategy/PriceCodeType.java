@@ -1,7 +1,16 @@
 package com.soebes.patterns.strategy;
 
 public enum PriceCodeType {
-    REGULAR_PRICE, // Usual Price for a Movie
-    CHILDREN_PRICE, // Price for Childrens Movies
-    BLOCK_BUSTER_PRICE // Block Buster Movies
+    /**
+     * Usual Price for a Movie
+     */
+    REGULAR_PRICE, 
+    /**
+     * Price for Childrens Movies
+     */
+    CHILDREN_PRICE, 
+    /**
+     * Block Buster Movies
+     */
+    BLOCK_BUSTER_PRICE 
 }
