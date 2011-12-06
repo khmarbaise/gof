@@ -5,6 +5,7 @@ public class Context {
     private IState currentState;
 
     public Context() {
+        //This is the first state.
         this.currentState = new ConcreteState2(this);
     }
 
