@@ -16,6 +16,6 @@ class Froehlich extends AZustand {
 
     public void verärgern() {
         System.out.println("Du spinnst wohl! ;-(");
-        getFreundin().setAktuellerZustand(new Bockig(getFreundin())); // Zustandsübergang
+        getFreundin().setZustand(new Bockig(getFreundin())); // Zustandsübergang
     }
 }

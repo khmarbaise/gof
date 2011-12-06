@@ -12,7 +12,7 @@ class Bockig extends AZustand {
 
     public void kussGeben() {
         System.out.println("Na gut! Hab dich wieder lieb.");
-        getFreundin().setAktuellerZustand(new Neutral(getFreundin())); // Zustandsübergang
+        getFreundin().setZustand(new Neutral(getFreundin())); // Zustandsübergang
     }
 
     public void verärgern() {

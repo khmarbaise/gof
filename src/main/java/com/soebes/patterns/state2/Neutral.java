@@ -14,11 +14,11 @@ class Neutral extends AZustand {
 
     public void kussGeben() {
         System.out.println("Hihi :-)");
-        getFreundin().setAktuellerZustand(new Froehlich(getFreundin())); // Zustandsübergang
+        getFreundin().setZustand(new Froehlich(getFreundin())); // Zustandsübergang
     }
 
     public void verärgern() {
         System.out.println("Du spinnst wohl! Ich bin sauer! ;-(");
-        getFreundin().setAktuellerZustand(new Bockig(getFreundin())); // Zustandsübergang
+        getFreundin().setZustand(new Bockig(getFreundin())); // Zustandsübergang
     }
 }

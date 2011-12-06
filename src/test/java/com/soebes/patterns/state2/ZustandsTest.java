@@ -7,10 +7,10 @@ public class ZustandsTest {
     @Test
     public void ersteZustand() {
         Freundin f = new Freundin();
-        f.getAktuellerZustand().verärgern();
-        f.getAktuellerZustand().verärgern();
-        f.getAktuellerZustand().unterhalten();
-        f.getAktuellerZustand().kussGeben();
-        f.getAktuellerZustand().unterhalten();
+        f.getZustand().verärgern();
+        f.getZustand().verärgern();
+        f.getZustand().unterhalten();
+        f.getZustand().kussGeben();
+        f.getZustand().unterhalten();
     }
 }
