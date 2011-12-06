@@ -84,7 +84,7 @@ public class BelegungsZeitraum implements Comparable<BelegungsZeitraum> {
     /**
      * This method will check if the given time frame is part of the current
      * object. It will result true if one of the following cases occur:
-     * <ul>
+     * <ol>
      * <li>
      * 
      * <pre>
@@ -118,7 +118,7 @@ public class BelegungsZeitraum implements Comparable<BelegungsZeitraum> {
      * </pre>
      * 
      * </li>
-     * </ul>
+     * </ol>
      * 
      * @param zeitraum
      *            The timeframe which will be checked.

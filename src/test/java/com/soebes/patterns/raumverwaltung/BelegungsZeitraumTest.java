@@ -15,7 +15,9 @@ public class BelegungsZeitraumTest extends TestBase {
         Assert.assertNotNull(bz);
     }
 
-    @Test(expectedExceptions = { BelegungsZeitraumEndeVorAnfangException.class })
+    @Test(expectedExceptions = {
+            BelegungsZeitraumEndeVorAnfangException.class
+    })
     public void endeVorAnfangExceptionTest()
             throws BelegungsZeitraumEndeVorAnfangException,
             BelegungsZeitraumAnfangGleichEndeException {
@@ -25,7 +27,9 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 15:00:00"));
     }
 
-    @Test(expectedExceptions = { BelegungsZeitraumAnfangGleichEndeException.class })
+    @Test(expectedExceptions = {
+            BelegungsZeitraumAnfangGleichEndeException.class
+    })
     public void anfangIstGleichEndeExceptionTest()
             throws BelegungsZeitraumEndeVorAnfangException,
             BelegungsZeitraumAnfangGleichEndeException {

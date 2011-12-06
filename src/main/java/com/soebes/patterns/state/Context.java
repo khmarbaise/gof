@@ -12,6 +12,7 @@ public class Context {
     public IState getCurrentState() {
         return currentState;
     }
+
     public void setCurrentState(IState currentState) {
         this.currentState = currentState;
     }
