@@ -4,28 +4,28 @@ import java.util.ArrayList;
 
 public class Invoker {
 
-	private ArrayList<ICommand> commands;
+    private ArrayList<ICommand> commands;
 
-	public Invoker() {
-		commands = new ArrayList<ICommand>();
-	}
+    public Invoker() {
+	commands = new ArrayList<ICommand>();
+    }
 
-	public void execute() {
-		for (ICommand	command : getCommands()) {
-			command.execute();
-		}
+    public void execute() {
+	for (ICommand command : getCommands()) {
+	    command.execute();
 	}
+    }
 
-	public void addCommand (ICommand command) {
-		getCommands().add(command);
-	}
+    public void addCommand(ICommand command) {
+	getCommands().add(command);
+    }
 
-	public ArrayList<ICommand> getCommands() {
-		return commands;
-	}
+    public ArrayList<ICommand> getCommands() {
+	return commands;
+    }
 
-	public void setCommands(ArrayList<ICommand> commands) {
-		this.commands = commands;
-	}
-	
+    public void setCommands(ArrayList<ICommand> commands) {
+	this.commands = commands;
+    }
+
 }

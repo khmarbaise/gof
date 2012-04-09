@@ -7,37 +7,37 @@ public class Movie {
     private Price price;
 
     public Movie() {
-        setTitle(null);
-        setPrice(null);
+	setTitle(null);
+	setPrice(null);
     }
 
     public Movie(String title, Price price) {
-        setTitle(title);
-        setPrice(price);
+	setTitle(title);
+	setPrice(price);
     }
 
     public void setPrice(Price price) {
-        this.price = price;
+	this.price = price;
     }
 
     public Price getPrice() {
-        return price;
+	return price;
     }
 
     public PriceCodeType getPriceCode() {
-        return price.getPriceCode();
+	return price.getPriceCode();
     }
 
     double getCharge(int daysRented) {
-        return price.getCharge(daysRented);
+	return price.getCharge(daysRented);
     }
 
     public void setTitle(String title) {
-        this.title = title;
+	this.title = title;
     }
 
     public String getTitle() {
-        return title;
+	return title;
     }
 
 }

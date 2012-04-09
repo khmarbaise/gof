@@ -8,22 +8,22 @@ public class Customer {
     private ArrayList<Rental> rentals = new ArrayList<Rental>();
 
     public void setName(String name) {
-        this.name = name;
+	this.name = name;
     }
 
     public String getName() {
-        return name;
+	return name;
     }
 
     public void setRentals(ArrayList<Rental> rentals) {
-        this.rentals = rentals;
+	this.rentals = rentals;
     }
 
     public ArrayList<Rental> getRentals() {
-        return rentals;
+	return rentals;
     }
 
     public void addRental(Rental rental) {
-        this.rentals.add(rental);
+	this.rentals.add(rental);
     }
 }
