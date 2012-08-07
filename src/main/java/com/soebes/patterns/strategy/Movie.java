@@ -2,42 +2,42 @@ package com.soebes.patterns.strategy;
 
 public class Movie {
 
-    private String title;
+  private String title;
 
-    private Price price;
+  private Price price;
 
-    public Movie() {
-	setTitle(null);
-	setPrice(null);
-    }
+  public Movie() {
+    setTitle(null);
+    setPrice(null);
+  }
 
-    public Movie(String title, Price price) {
-	setTitle(title);
-	setPrice(price);
-    }
+  public Movie(String title, Price price) {
+    setTitle(title);
+    setPrice(price);
+  }
 
-    public void setPrice(Price price) {
-	this.price = price;
-    }
+  public void setPrice(Price price) {
+    this.price = price;
+  }
 
-    public Price getPrice() {
-	return price;
-    }
+  public Price getPrice() {
+    return price;
+  }
 
-    public PriceCodeType getPriceCode() {
-	return price.getPriceCode();
-    }
+  public PriceCodeType getPriceCode() {
+    return price.getPriceCode();
+  }
 
-    double getCharge(int daysRented) {
-	return price.getCharge(daysRented);
-    }
+  double getCharge(int daysRented) {
+    return price.getCharge(daysRented);
+  }
 
-    public void setTitle(String title) {
-	this.title = title;
-    }
+  public void setTitle(String title) {
+    this.title = title;
+  }
 
-    public String getTitle() {
-	return title;
-    }
+  public String getTitle() {
+    return title;
+  }
 
 }

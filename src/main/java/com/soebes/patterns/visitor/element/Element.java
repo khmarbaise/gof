@@ -4,6 +4,6 @@ import com.soebes.patterns.visitor.visitor.Visitor;
 
 public interface Element {
 
-	void nimmEntgegen(Visitor visitor);
+  void nimmEntgegen(Visitor visitor);
 
 }
