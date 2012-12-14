@@ -4,27 +4,6 @@ import java.util.Date;
 
 public class BelegungsZeitraum implements Comparable<BelegungsZeitraum> {
 
-<<<<<<< HEAD
-    private Date anfangBelegung;
-    private Date endeBelegung;
-
-    public BelegungsZeitraum(Date anfangBelegung, Date endeBelegung)
-            throws BelegungsZeitraumEndeVorAnfangException,
-            BelegungsZeitraumAnfangGleichEndeException {
-
-        if (endeBelegung.before(anfangBelegung)) {
-            throw new BelegungsZeitraumEndeVorAnfangException(
-                    "Das Ende der Belegung liegt vor dem Anfang der Belegung");
-        }
-
-        if (anfangBelegung.equals(endeBelegung)) {
-            throw new BelegungsZeitraumAnfangGleichEndeException(
-                    "Anfang und Ende sind gleich!");
-        }
-
-        this.anfangBelegung = anfangBelegung;
-        this.endeBelegung = endeBelegung;
-=======
   private Date anfangBelegung;
   private Date endeBelegung;
 
@@ -34,7 +13,6 @@ public class BelegungsZeitraum implements Comparable<BelegungsZeitraum> {
     if (endeBelegung.before(anfangBelegung)) {
       throw new BelegungsZeitraumEndeVorAnfangException(
           "Das Ende der Belegung liegt vor dem Anfang der Belegung");
->>>>>>> c1951253c7e434d9747eb8577c6aed37304c9261
     }
     if (anfangBelegung.equals(endeBelegung)) {
       throw new BelegungsZeitraumAnfangGleichEndeException(
@@ -199,110 +177,7 @@ public class BelegungsZeitraum implements Comparable<BelegungsZeitraum> {
     // +--------+
     // No need to code, cause automatically false.
 
-<<<<<<< HEAD
-    /**
-     * This method will check if the given time frame is part of the current
-     * object. It will result true if one of the following cases occur:
-     * <ol>
-     * <li>
-     * 
-     * <pre>
-     *           Anfang    Ende
-     *           +---------+ (this)
-     * 
-     *                 A       E
-     *                +-------+
-     * </pre>
-     * 
-     * </li>
-     * <li>
-     * 
-     * <pre>
-     *           Anfang    Ende
-     *           +---------+ (this)
-     * 
-     *           A         E
-     *           +---------+
-     * </pre>
-     * 
-     * </li>
-     * <li>
-     * 
-     * <pre>
-     *           Anfang    Ende
-     *           +---------+ (this)
-     * 
-     *     A       E
-     *     +-------+
-     * </pre>
-     * 
-     * </li>
-     * </ol>
-     * 
-     * @param zeitraum
-     *            The time frame which will be checked.
-     * @return true if it is contained false otherwise
-     */
-    public boolean contains(BelegungsZeitraum zeitraum) {
-        boolean result = false;
-
-        // Anfang Ende
-        // +----------+ (this)
-        //
-        // A E
-        // +--------+
-        // No need to code, cause it's automatically false.
-
-        // Anfang Ende
-        // +----------+ (this)
-        //
-        // A E
-        // +--------+
-        if (this.getAnfangBelegung().before(zeitraum.getAnfangBelegung())) {
-            if (this.getEndeBelegung().after(zeitraum.getAnfangBelegung())) {
-                result = true;
-            }
-        }
-
-        // Anfang Ende
-        // +----------+ (this)
-        //
-        // A E
-        // +--------+
-        if (this.getAnfangBelegung().after(zeitraum.getAnfangBelegung())
-                || this.getAnfangBelegung()
-                        .equals(zeitraum.getAnfangBelegung())) {
-            if (this.getEndeBelegung().before(zeitraum.getEndeBelegung())
-                    || this.getEndeBelegung()
-                            .equals(zeitraum.getEndeBelegung())) {
-                // Liegt drin
-                result = true;
-            }
-        }
-
-        // Anfang Ende
-        // +----------+ (this)
-        //
-        // A E
-        // +--------+
-        if (zeitraum.getAnfangBelegung().before(this.getAnfangBelegung())) {
-            if (this.getAnfangBelegung().before(zeitraum.getEndeBelegung())) {
-                result = true;
-            }
-        }
-
-        // Anfang Ende
-        // +----------+ (this)
-        //
-        // A E
-        // +--------+
-        // No need to code, cause automatically false.
-
-        return result;
-    }
-=======
     return result;
   }
->>>>>>> c1951253c7e434d9747eb8577c6aed37304c9261
 
 }
