@@ -8,5 +8,5 @@ package com.soebes.patterns.command;
  */
 public interface ICommand {
 
-	void execute();
+  void execute();
 }
