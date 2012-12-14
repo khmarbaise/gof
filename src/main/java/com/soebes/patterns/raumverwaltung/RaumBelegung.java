@@ -2,12 +2,13 @@ package com.soebes.patterns.raumverwaltung;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class RaumBelegung {
 
     private Raum raum;
 
-    private ArrayList<BelegungsZeitraum> belegungen = new ArrayList<BelegungsZeitraum>();
+    private List<BelegungsZeitraum> belegungen = new ArrayList<BelegungsZeitraum>();
 
     public RaumBelegung(Raum raum) {
         this.raum = raum;
@@ -21,7 +22,7 @@ public class RaumBelegung {
         return raum;
     }
 
-    public ArrayList<BelegungsZeitraum> getBelegungen() {
+    public List<BelegungsZeitraum> getBelegungen() {
         return belegungen;
     }
 

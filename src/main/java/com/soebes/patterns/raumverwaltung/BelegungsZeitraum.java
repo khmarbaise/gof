@@ -10,10 +10,12 @@ public class BelegungsZeitraum implements Comparable<BelegungsZeitraum> {
     public BelegungsZeitraum(Date anfangBelegung, Date endeBelegung)
             throws BelegungsZeitraumEndeVorAnfangException,
             BelegungsZeitraumAnfangGleichEndeException {
+
         if (endeBelegung.before(anfangBelegung)) {
             throw new BelegungsZeitraumEndeVorAnfangException(
                     "Das Ende der Belegung liegt vor dem Anfang der Belegung");
         }
+
         if (anfangBelegung.equals(endeBelegung)) {
             throw new BelegungsZeitraumAnfangGleichEndeException(
                     "Anfang und Ende sind gleich!");
@@ -121,7 +123,7 @@ public class BelegungsZeitraum implements Comparable<BelegungsZeitraum> {
      * </ol>
      * 
      * @param zeitraum
-     *            The timeframe which will be checked.
+     *            The time frame which will be checked.
      * @return true if it is contained false otherwise
      */
     public boolean contains(BelegungsZeitraum zeitraum) {

@@ -1,7 +1,8 @@
 package com.soebes.patterns.raumverwaltung;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static org.fest.assertions.Assertions.assertThat;
 
 @Test
 public class BelegungsZeitraumTest extends TestBase {
@@ -12,7 +13,7 @@ public class BelegungsZeitraumTest extends TestBase {
         BelegungsZeitraum bz = new BelegungsZeitraum(
                 parseDate("01.01.2009 12:00:00"),
                 parseDate("01.01.2009 15:00:00"));
-        Assert.assertNotNull(bz);
+        assertThat(bz).isNotNull();
     }
 
     @Test(expectedExceptions = {
@@ -48,7 +49,7 @@ public class BelegungsZeitraumTest extends TestBase {
         BelegungsZeitraum bz2 = new BelegungsZeitraum(
                 parseDate("01.01.2009 15:00:00"),
                 parseDate("01.01.2009 16:00:00"));
-        Assert.assertEquals(bz1.compareTo(bz2), 0);
+        assertThat(bz1.compareTo(bz2)).isEqualTo(0);
     }
 
     public void compareToNegativeAnfangTest()
@@ -62,7 +63,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 16:00:00"));
 
         int result = bz1.compareTo(bz2);
-        Assert.assertEquals(result < 0, true);
+        assertThat(result).isLessThan(0);
     }
 
     public void compareToPositiveAnfangTest()
@@ -76,7 +77,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 16:00:00"));
 
         int result = bz1.compareTo(bz2);
-        Assert.assertEquals(result > 0, true);
+        assertThat(result).isGreaterThan(0);
     }
 
     public void compareToNegativeEndeTest()
@@ -90,7 +91,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 16:01:00"));
 
         int result = bz1.compareTo(bz2);
-        Assert.assertEquals(result < 0, true);
+        assertThat(result).isLessThan(0);
     }
 
     public void compareToPositiveEndTest()
@@ -104,7 +105,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 16:00:00"));
 
         int result = bz1.compareTo(bz2);
-        Assert.assertEquals(result > 0, true);
+        assertThat(result).isGreaterThan(0);
     }
 
     public void containsZ2beforeZ1Test()
@@ -122,8 +123,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 14:00:00"),
                 parseDate("01.01.2009 14:30:00"));
 
-        boolean result = z1.contains(z2);
-        Assert.assertEquals(result, false);
+        assertThat(z1.contains(z2)).isFalse();
     }
 
     public void containsZ2BeforeZ1IntersectTest()
@@ -142,8 +142,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 14:30:00"),
                 parseDate("01.01.2009 15:30:00"));
 
-        boolean result = z1.contains(z2);
-        Assert.assertEquals(result, true);
+        assertThat(z1.contains(z2)).isTrue();
     }
 
     public void containsZ2IntersectsZ1Test()
@@ -161,8 +160,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 15:00:01"),
                 parseDate("01.01.2009 15:59:59"));
 
-        boolean result = z1.contains(z2);
-        Assert.assertEquals(result, true);
+        assertThat(z1.contains(z2)).isTrue();
     }
 
     public void containsZ2AfterZ1IntersectTest()
@@ -180,8 +178,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 15:30:00"),
                 parseDate("01.01.2009 16:30:00"));
 
-        boolean result = z1.contains(z2);
-        Assert.assertEquals(result, true);
+        assertThat(z1.contains(z2)).isTrue();
     }
 
     public void containsZ2AfterZ1Test()
@@ -199,8 +196,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 16:00:01"),
                 parseDate("01.01.2009 16:30:00"));
 
-        boolean result = z1.contains(z2);
-        Assert.assertEquals(result, false);
+        assertThat(z1.contains(z2)).isFalse();
     }
 
     public void containsZ2EqualsZ1Test()
@@ -218,8 +214,7 @@ public class BelegungsZeitraumTest extends TestBase {
                 parseDate("01.01.2009 15:00:00"),
                 parseDate("01.01.2009 16:00:00"));
 
-        boolean result = z1.contains(z2);
-        Assert.assertEquals(result, true);
+        assertThat(z1.contains(z2)).isTrue();
     }
 
 }

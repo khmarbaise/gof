@@ -1,7 +1,8 @@
 package com.soebes.patterns.raumverwaltung;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static org.fest.assertions.Assertions.assertThat;
 
 @Test
 public class RaumBelegungTest extends TestBase {
@@ -19,7 +20,7 @@ public class RaumBelegungTest extends TestBase {
                 parseDate("01.01.2009 12:00:00"),
                 parseDate("01.01.2009 15:00:00"));
 
-        Assert.assertEquals(rb.isVerfuegbar(zeitraum2), false);
+        assertThat(rb.isVerfuegbar(zeitraum2)).isFalse();
     }
 
     public void isVerfuegbarTest()
@@ -36,7 +37,7 @@ public class RaumBelegungTest extends TestBase {
                 parseDate("01.01.2009 16:00:00"),
                 parseDate("01.01.2009 17:00:00"));
 
-        Assert.assertEquals(rb.isVerfuegbar(zeitraum2), true);
+        assertThat(rb.isVerfuegbar(zeitraum2)).isTrue();
     }
 
     public void verfuegbarMehrereZeitraeumeTest()
@@ -60,7 +61,7 @@ public class RaumBelegungTest extends TestBase {
                 parseDate("01.01.2009 15:10:00"),
                 parseDate("01.01.2009 15:30:00"));
 
-        Assert.assertEquals(rb.isVerfuegbar(buchungsZeit), true);
+        assertThat(rb.isVerfuegbar(buchungsZeit)).isTrue();
     }
 
     public void verfuegbarMehrereZeitraeumeIntersectTest()
@@ -83,7 +84,8 @@ public class RaumBelegungTest extends TestBase {
         BelegungsZeitraum buchungsZeit = new BelegungsZeitraum(
                 parseDate("01.01.2009 14:45:00"),
                 parseDate("01.01.2009 14:55:00"));
-        Assert.assertEquals(rb.isVerfuegbar(buchungsZeit), true);
+        
+        assertThat(rb.isVerfuegbar(buchungsZeit)).isTrue();
     }
 
 }
