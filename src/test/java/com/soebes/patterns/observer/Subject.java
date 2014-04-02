@@ -21,4 +21,10 @@ public class Subject
     public List<Observer> getObservers() {
         return observers;
     }
+
+    public Subject detach( Observer observer )
+    {
+        observers.remove( observer );
+        return this;
+    }
 }
