@@ -9,10 +9,10 @@ public class ObserverTest
     public void should_do_something_meaningful()
     {
         Subject subject = new Subject();
-        
-        Observer observer = new Observer();
-        
+
+        Observer observer = new ConcreteObserver();
+
         subject.attach( observer );
-        
+
     }
 }

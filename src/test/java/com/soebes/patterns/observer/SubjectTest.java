@@ -51,4 +51,13 @@ public class SubjectTest
         subject.detach( observer );
         assertThat( subject.getObservers() ).hasSize( 0 );
     }
+
+    @Test
+    public void should_call_notify_for_all_XXX()
+        throws Exception
+    {
+        Observer observer = mock( Observer.class );
+        Subject subject = new Subject();
+        subject.attach( observer );
+    }
 }

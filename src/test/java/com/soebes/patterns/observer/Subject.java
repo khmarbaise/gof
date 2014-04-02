@@ -18,7 +18,8 @@ public class Subject
         return this;
     }
 
-    public List<Observer> getObservers() {
+    public List<Observer> getObservers()
+    {
         return observers;
     }
 
@@ -26,5 +27,13 @@ public class Subject
     {
         observers.remove( observer );
         return this;
+    }
+
+    public void notifyObservers()
+    {
+        for ( Observer observer : observers )
+        {
+            observer.update();
+        }
     }
 }
