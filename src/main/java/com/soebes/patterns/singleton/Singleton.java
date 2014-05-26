@@ -2,15 +2,15 @@ package com.soebes.patterns.singleton;
 
 public final class Singleton {
 
-  private static Singleton singleton = null;
+    private static Singleton singleton = null;
 
-  public static Singleton getInstance() {
-    if (singleton == null) {
-      singleton = new Singleton();
+    public static Singleton getInstance() {
+        if (singleton == null) {
+            singleton = new Singleton();
+        }
+        return singleton;
     }
-    return singleton;
-  }
 
-  private Singleton() {
-  }
+    private Singleton() {
+    }
 }

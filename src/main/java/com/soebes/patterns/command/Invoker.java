@@ -5,28 +5,28 @@ import java.util.List;
 
 public class Invoker {
 
-  private List<ICommand> commands;
+    private List<ICommand> commands;
 
-  public Invoker() {
-    commands = new ArrayList<ICommand>();
-  }
-
-  public void execute() {
-    for (ICommand command : getCommands()) {
-      command.execute();
+    public Invoker() {
+        commands = new ArrayList<ICommand>();
     }
-  }
 
-  public void addCommand(ICommand command) {
-    getCommands().add(command);
-  }
+    public void execute() {
+        for (ICommand command : getCommands()) {
+            command.execute();
+        }
+    }
 
-  public List<ICommand> getCommands() {
-    return commands;
-  }
+    public void addCommand(ICommand command) {
+        getCommands().add(command);
+    }
 
-  public void setCommands(List<ICommand> commands) {
-    this.commands = commands;
-  }
+    public List<ICommand> getCommands() {
+        return commands;
+    }
+
+    public void setCommands(List<ICommand> commands) {
+        this.commands = commands;
+    }
 
 }

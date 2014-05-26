@@ -2,6 +2,6 @@ package com.soebes.patterns.observer;
 
 public interface IAbonnent {
 
-  void erhalteZeitung(Zeitung zeitung);
+    void erhalteZeitung(Zeitung zeitung);
 
 }

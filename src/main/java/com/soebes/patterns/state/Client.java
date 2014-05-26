@@ -1,13 +1,13 @@
 package com.soebes.patterns.state;
 
 public class Client {
-  private Context context;
+    private Context context;
 
-  public Client(Context context) {
-    this.context = context;
-  }
+    public Client(Context context) {
+        this.context = context;
+    }
 
-  public void changeState() {
-    context.operate();
-  }
+    public void changeState() {
+        context.operate();
+    }
 }

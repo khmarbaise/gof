@@ -5,7 +5,7 @@ import com.soebes.patterns.visitor.element.ConcreteElementB;
 
 public interface Visitor {
 
-  void visitElement(ConcreteElementA a);
+    void visitElement(ConcreteElementA a);
 
-  void visitElement(ConcreteElementB b);
+    void visitElement(ConcreteElementB b);
 }

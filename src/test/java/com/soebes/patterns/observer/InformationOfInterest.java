@@ -1,7 +1,6 @@
 package com.soebes.patterns.observer;
 
-public class InformationOfInterest
-{
+public class InformationOfInterest {
 
     private String subjectId;
 
@@ -9,47 +8,39 @@ public class InformationOfInterest
 
     private long revisions;
 
-    public InformationOfInterest()
-    {
+    public InformationOfInterest() {
     }
 
-    public InformationOfInterest( final String subjectId, final long currentRevision, final long revisions )
-    {
+    public InformationOfInterest(final String subjectId, final long currentRevision, final long revisions) {
         super();
         this.subjectId = subjectId;
         this.currentRevision = currentRevision;
         this.revisions = revisions;
     }
 
-    public long getCurrentRevision()
-    {
+    public long getCurrentRevision() {
         return currentRevision;
     }
 
-    public InformationOfInterest setCurrentRevision( long currentRevision )
-    {
+    public InformationOfInterest setCurrentRevision(long currentRevision) {
         this.currentRevision = currentRevision;
         return this;
     }
 
-    public long getRevisions()
-    {
+    public long getRevisions() {
         return revisions;
     }
 
-    public InformationOfInterest setRevisions( long revisions )
-    {
+    public InformationOfInterest setRevisions(long revisions) {
         this.revisions = revisions;
         return this;
     }
 
-    public String getSubjectId()
-    {
+    public String getSubjectId() {
         return subjectId;
     }
 
-    public InformationOfInterest setSubjectId( String subjectId )
-    {
+    public InformationOfInterest setSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
     }

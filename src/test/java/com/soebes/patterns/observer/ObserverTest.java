@@ -2,17 +2,15 @@ package com.soebes.patterns.observer;
 
 import org.junit.Test;
 
-public class ObserverTest
-{
+public class ObserverTest {
 
     @Test
-    public void should_do_something_meaningful()
-    {
+    public void should_do_something_meaningful() {
         Subject subject = new Subject();
 
         Observer observer = new ConcreteObserver();
 
-        subject.attach( observer );
+        subject.attach(observer);
 
     }
 }

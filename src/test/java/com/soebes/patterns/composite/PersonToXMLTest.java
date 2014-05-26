@@ -16,19 +16,18 @@ import com.soebes.patterns.composite.PersonToXML;
  */
 public class PersonToXMLTest {
 
-  private Person person;
+    private Person person;
 
-  @Test
-  public void firstTest() {
+    @Test
+    public void firstTest() {
 
-    person = new Person();
-    person.setAlter(23);
-    person.setName("DerName");
-    person.setVorname("VornameDer");
+        person = new Person();
+        person.setAlter(23);
+        person.setName("DerName");
+        person.setVorname("VornameDer");
 
-    PersonToXML personToXml = new PersonToXML(person);
-    String xml = personToXml.toXML();
-    assertEquals(xml,
-        "<Person><Vorname>VornameDer</Vorname><Name>DerName</Name></Person>");
-  }
+        PersonToXML personToXml = new PersonToXML(person);
+        String xml = personToXml.toXML();
+        assertEquals(xml, "<Person><Vorname>VornameDer</Vorname><Name>DerName</Name></Person>");
+    }
 }

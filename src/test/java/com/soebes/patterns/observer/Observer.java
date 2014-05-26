@@ -1,7 +1,6 @@
 package com.soebes.patterns.observer;
 
-public interface Observer
-{
+public interface Observer {
 
-    void update ();
+    void update();
 }
