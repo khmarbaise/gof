@@ -1,12 +1,11 @@
 package com.soebes.patterns.strategy;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.offset;
 
-import org.fest.assertions.Delta;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-@Test
 public class MovieTest {
     public static double EPSILON = 1E-06;
 
@@ -27,22 +26,27 @@ public class MovieTest {
     @Test(dataProvider = "createChildrensMovie")
     public void childrensMovie(Movie movie, int rentedDays, double expectedCharge) {
         double calculatedCharge = movie.getCharge(rentedDays);
-        assertThat(calculatedCharge).isEqualTo(expectedCharge, Delta.delta(EPSILON));
+        assertThat(calculatedCharge).isEqualTo(expectedCharge, offset(EPSILON));
     }
 
     @DataProvider(name = "createRegularMovie")
     public Object[][] createRegularMovie() {
+    	//@formatter:off
         return new Object[][] {
-                // Movie Type Of Movie, rentedDays, expectedCharge
-                { new Movie("Die Hard", new RegularPrice()), 1, 2.0 }, { new Movie("Die Hard", new RegularPrice()), 2, 2.0 },
-                { new Movie("Die Hard", new RegularPrice()), 3, 3.5 }, { new Movie("Die Hard", new RegularPrice()), 4, 5.0 },
-                { new Movie("Die Hard", new RegularPrice()), 5, 6.5 }, };
+            // Movie Type Of Movie, rentedDays, expectedCharge
+            { new Movie("Die Hard", new RegularPrice()), 1, 2.0 }, 
+            { new Movie("Die Hard", new RegularPrice()), 2, 2.0 },
+            { new Movie("Die Hard", new RegularPrice()), 3, 3.5 },
+            { new Movie("Die Hard", new RegularPrice()), 4, 5.0 },
+            { new Movie("Die Hard", new RegularPrice()), 5, 6.5 }, 
+        };
+    	//@formatter:on
     }
 
     @Test(dataProvider = "createRegularMovie")
     public void regularMovie(Movie movie, int rentedDays, double expectedCharge) {
         double calculatedCharge = movie.getCharge(rentedDays);
-        assertThat(calculatedCharge).isEqualTo(expectedCharge, Delta.delta(EPSILON));
+        assertThat(calculatedCharge).isEqualTo(expectedCharge,offset(EPSILON));
     }
 
     @DataProvider(name = "createBlockBusterMovie")
@@ -59,7 +63,7 @@ public class MovieTest {
     @Test(dataProvider = "createBlockBusterMovie")
     public void blockBusterMovie(Movie movie, int rentedDays, double expectedCharge) {
         double calculatedCharge = movie.getCharge(rentedDays);
-        assertThat(calculatedCharge).isEqualTo(expectedCharge, Delta.delta(EPSILON));
+        assertThat(calculatedCharge).isEqualTo(expectedCharge, offset(EPSILON));
     }
 
 }

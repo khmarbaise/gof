@@ -1,8 +1,8 @@
 package com.soebes.patterns.raumverwaltung;
 
-import org.testng.annotations.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import static org.fest.assertions.Assertions.assertThat;
+import org.testng.annotations.Test;
 
 @Test
 public class BelegungsZeitraumTest extends TestBase {
